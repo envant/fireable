@@ -1,7 +1,7 @@
 {
     "name": "envant/fireable",
-    "description": ":description",
-    "license": "license",
+    "description": "An elegant way to trigger events based on attributes changes",
+    "license": "MIT",
     "authors": [
         {
             "name": "Boris Lepikhin",
@@ -10,7 +10,7 @@
         }
     ],
     "homepage": "https://github.com/envant/fireable",
-    "keywords": ["Laravel", "Fireable"],
+    "keywords": ["Laravel", "Fireable", "event"],
     "require": {
         "illuminate/support": "~5"
     },
