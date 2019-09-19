@@ -22,7 +22,7 @@ $ composer require envant/fireable
 
 Let's say we need to trigger specified events when specific model attributes are updated.
 
-For example, we need to notify user when he gets an "approved" status. Instead of observing model's "dirty" attributes and firing events manually we could do it more elegantly by assigning specified events to attributes or even certain values of attributes.
+For example, you need to notify user when he gets an "approved" status. Instead of observing model's "dirty" attributes and firing events manually we could do it more elegantly by assigning specified events to attributes or even certain values of attributes.
 
 ```php
 class User extends Authenticatable
