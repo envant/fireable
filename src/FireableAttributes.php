@@ -7,7 +7,7 @@ use Envant\Fireable\Facades\Fireable as FireableFacade;
 trait FireableAttributes
 {
     /**
-     * Process attributes on model update
+     * Process attributes on model update.
      *
      * @return void
      */
@@ -18,7 +18,7 @@ trait FireableAttributes
         });
     }
 
-    /** 
+    /**
      * @return array
      */
     public function getFireableAttributes()
