@@ -10,7 +10,7 @@ An elegant way to trigger events based on attributes changes.
 Install package through Composer
 
 ``` bash
-$ composer require envant/fireable:dev-master
+$ composer require envant/fireable
 ```
 
 ## Usage
