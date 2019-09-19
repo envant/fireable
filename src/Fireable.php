@@ -17,7 +17,7 @@ class Fireable
     protected $model;
 
     /**
-     * Match updated attributes with fireable ones and trigger events
+     * Match updated attributes with fireable ones and trigger events.
      *
      * @param Model $model
      * @return void
@@ -32,7 +32,7 @@ class Fireable
     }
 
     /**
-     * Get a list of the attributes that were updated and have specified events
+     * Get a list of the attributes that were updated and have specified events.
      *
      * @return array
      */
@@ -48,7 +48,7 @@ class Fireable
     }
 
     /**
-     * Trigger events for matched attributes
+     * Trigger events for matched attributes.
      *
      * @return void
      */

@@ -31,7 +31,7 @@ class FireableServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/fireable.php', 'fireable');
+        $this->mergeConfigFrom(__DIR__.'/../config/fireable.php', 'fireable');
 
         // Register the service the package provides.
         $this->app->singleton('fireable', function ($app) {
@@ -58,7 +58,7 @@ class FireableServiceProvider extends ServiceProvider
     {
         // Publishing the configuration file.
         $this->publishes([
-            __DIR__ . '/../config/fireable.php' => config_path('fireable.php'),
+            __DIR__.'/../config/fireable.php' => config_path('fireable.php'),
         ], 'fireable.config');
     }
 }
