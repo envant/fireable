@@ -28,7 +28,7 @@ class Fireable
         $this->fireableAttributes = $this->model->getFireableAttributes();
         $this->updatedAttributes = $this->getUpdatedFireableAttributes($this->model);
 
-        $this->fireEvents();
+        $this->dispatchEvents();
     }
 
     /**
@@ -48,11 +48,11 @@ class Fireable
     }
 
     /**
-     * Trigger events for matched attributes.
+     * Dispatch events for matched attributes.
      *
      * @return void
      */
-    private function fireEvents(): void
+    private function dispatchEvents(): void
     {
         foreach ($this->updatedAttributes as $attribute => $value) {
             if (is_array($this->fireableAttributes[$attribute]) && isset($this->fireableAttributes[$attribute][$value])) {

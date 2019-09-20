@@ -2,8 +2,6 @@
 
 namespace Envant\Fireable;
 
-use Envant\Fireable\Facades\Fireable as FireableFacade;
-
 trait FireableAttributes
 {
     /**
@@ -14,7 +12,7 @@ trait FireableAttributes
     protected static function bootFireableAttributes()
     {
         static::updated(function ($model) {
-            FireableFacade::processAttributes($model);
+            (new Fireable)->processAttributes($model);
         });
     }
 
