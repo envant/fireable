@@ -2,8 +2,8 @@
 
 namespace Envant\Fireable\Tests;
 
-use Orchestra\Testbench\TestCase as BaseTestCase;
 use Envant\Fireable\Tests\Models\User;
+use Orchestra\Testbench\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase
 {
@@ -24,7 +24,7 @@ abstract class TestCase extends BaseTestCase
      */
     protected function getEnvironmentSetUp($app)
     {
-        $app['path.base'] = __DIR__ . '/../src';
+        $app['path.base'] = __DIR__.'/../src';
 
         $app['config']->set('database.default', 'testbench');
         $app['config']->set(
@@ -54,7 +54,7 @@ abstract class TestCase extends BaseTestCase
     {
         $this->loadMigrationsFrom([
             '--database' => 'testbench',
-            '--realpath' => realpath(__DIR__ . '/migrations'),
+            '--realpath' => realpath(__DIR__.'/migrations'),
         ]);
 
         $this->testUser = User::create([

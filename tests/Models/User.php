@@ -2,8 +2,8 @@
 
 namespace Envant\Fireable\Tests\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Envant\Fireable\FireableAttributes;
+use Illuminate\Database\Eloquent\Model;
 use Envant\Fireable\Tests\Events\EmailUpdated;
 use Envant\Fireable\Tests\Events\StatusApproved;
 use Envant\Fireable\Tests\Events\StatusRejected;
