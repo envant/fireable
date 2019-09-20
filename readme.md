@@ -2,6 +2,7 @@
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![StyleCI](https://styleci.io/repos/209407300/shield)](https://styleci.io/repos/209407300)
+[![Build Status](https://travis-ci.org/envant/fireable.svg?branch=master)](https://travis-ci.org/envant/fireable)
 [![Total Downloads][ico-downloads]][link-downloads]
 
 An elegant way to trigger events based on attributes changes.
