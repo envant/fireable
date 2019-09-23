@@ -17,6 +17,7 @@ trait FireableAttributes
     }
 
     /**
+     * Get a list of model's "fireable" attributes
      * @return array
      */
     public function getFireableAttributes()

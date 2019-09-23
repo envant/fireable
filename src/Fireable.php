@@ -55,15 +55,51 @@ class Fireable
     private function dispatchEvents(): void
     {
         foreach ($this->updatedAttributes as $attribute => $value) {
-            if (is_array($this->fireableAttributes[$attribute]) && isset($this->fireableAttributes[$attribute][$value])) {
-                $eventName = $this->fireableAttributes[$attribute][$value];
-            } elseif (is_string($this->fireableAttributes[$attribute]) && class_exists($this->fireableAttributes[$attribute])) {
-                $eventName = $this->fireableAttributes[$attribute];
-            } else {
-                continue;
+            if ($eventName = $this->getEventName($attribute, $value)) {
+                event(new $eventName($this->model));
             }
-
-            event(new $eventName($this->model));
         }
+    }
+
+    /**
+     * Get event name for specified attribute and assigned value pair
+     *
+     * @param string $attribute
+     * @param mixed $value
+     * @return string|null
+     */
+    private function getEventName(string $attribute, $value): ?string
+    {
+        return $this->getEventNameForAttribute($attribute)
+            ?? $this->getEventNameForExactValue($attribute, $value);
+    }
+
+    /**
+     * Get event name if values are not specified
+     *
+     * @param string $attribute
+     * @return string|null
+     */
+    private function getEventNameForAttribute(string $attribute): ?string
+    {
+        return is_string($this->fireableAttributes[$attribute])
+            && class_exists($this->fireableAttributes[$attribute])
+            ? $this->fireableAttributes[$attribute]
+            : null;
+    }
+
+    /**
+     * Get event name if there are specified values
+     *
+     * @param string $attribute
+     * @param mixed $value
+     * @return string|null
+     */
+    private function getEventNameForExactValue(string $attribute, $value): ?string
+    {
+        return is_array($this->fireableAttributes[$attribute])
+            && isset($this->fireableAttributes[$attribute][$value])
+            ? $this->fireableAttributes[$attribute][$value]
+            : null;
     }
 }
