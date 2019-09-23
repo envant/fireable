@@ -62,7 +62,7 @@ class Fireable
     }
 
     /**
-     * Get event name for specified attribute and assigned value pair
+     * Get event name for specified attribute and assigned value pair.
      *
      * @param string $attribute
      * @param mixed $value
@@ -75,7 +75,7 @@ class Fireable
     }
 
     /**
-     * Get event name if values are not specified
+     * Get event name if values are not specified.
      *
      * @param string $attribute
      * @return string|null
@@ -89,7 +89,7 @@ class Fireable
     }
 
     /**
-     * Get event name if there are specified values
+     * Get event name if there are specified values.
      *
      * @param string $attribute
      * @param mixed $value
