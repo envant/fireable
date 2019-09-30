@@ -12,8 +12,8 @@
     "homepage": "https://github.com/envant/fireable",
     "keywords": ["Laravel", "Fireable", "event"],
     "require": {
-        "illuminate/support": "^5.8|^6.0",
-        "illuminate/database": "^5.8|^6.0"
+        "illuminate/support": "^5.8|^6",
+        "illuminate/database": "^5.8|^6"
     },
     "require-dev": {
         "phpunit/phpunit": "~7.0",
