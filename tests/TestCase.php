@@ -54,7 +54,7 @@ abstract class TestCase extends BaseTestCase
     {
         $this->loadMigrationsFrom([
             '--database' => 'testbench',
-            '--realpath' => realpath(__DIR__.'/migrations'),
+            '--path' => realpath(__DIR__.'/migrations'),
         ]);
 
         $this->testUser = User::create([
