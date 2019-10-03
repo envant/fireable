@@ -9,7 +9,7 @@ trait FireableAttributes
      *
      * @return void
      */
-    protected static function bootFireableAttributes()
+    protected static function bootFireableAttributes(): void
     {
         static::updated(function ($model) {
             (new Fireable)->processAttributes($model);
@@ -20,7 +20,7 @@ trait FireableAttributes
      * Get a list of model's "fireable" attributes.
      * @return array
      */
-    public function getFireableAttributes()
+    public function getFireableAttributes(): array
     {
         return $this->fireableAttributes;
     }

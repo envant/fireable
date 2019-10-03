@@ -11,7 +11,7 @@ class FireableServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         // Publishing is only necessary when using the CLI.
         if ($this->app->runningInConsole()) {
@@ -24,10 +24,8 @@ class FireableServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/fireable.php', 'fireable');
-
         // Register the service the package provides.
         $this->app->singleton('fireable', function ($app) {
             return new Fireable;
@@ -39,9 +37,11 @@ class FireableServiceProvider extends ServiceProvider
      *
      * @return array
      */
-    public function provides()
+    public function provides(): array
     {
-        return ['fireable'];
+        return [
+            'fireable',
+        ];
     }
 
     /**
@@ -49,7 +49,7 @@ class FireableServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function bootForConsole()
+    protected function bootForConsole(): void
     {
         // Publishing the configuration file.
         $this->publishes([
