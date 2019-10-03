@@ -19,14 +19,14 @@ class Fireable
     /**
      * Match updated attributes with fireable ones and trigger events.
      *
-     * @param Model $model
+     * @param \Envant\Fireable\FireableAttributes|Model $model
      * @return void
      */
     public function processAttributes(Model $model): void
     {
         $this->model = $model;
         $this->fireableAttributes = $this->model->getFireableAttributes();
-        $this->updatedAttributes = $this->getUpdatedFireableAttributes($this->model);
+        $this->updatedAttributes = $this->getUpdatedFireableAttributes();
 
         $this->dispatchEvents();
     }
