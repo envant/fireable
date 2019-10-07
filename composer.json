@@ -12,7 +12,7 @@
     "homepage": "https://github.com/envant/fireable",
     "keywords": ["Laravel", "Fireable", "event"],
     "require": {
-        "php": "^7.1.3",
+        "php": "^7.2",
         "illuminate/support": "^5.8|^6",
         "illuminate/database": "^5.8|^6"
     },
