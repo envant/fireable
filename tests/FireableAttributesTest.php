@@ -2,9 +2,9 @@
 
 namespace Envant\Fireable\Tests;
 
-use Envant\Fireable\Tests\Models\User;
 use Envant\Fireable\Tests\Events\EmailUpdated;
 use Envant\Fireable\Tests\Events\StatusApproved;
+use Envant\Fireable\Tests\Models\User;
 
 class FireableAttributesTest extends TestCase
 {
