@@ -43,17 +43,4 @@ class FireableServiceProvider extends ServiceProvider
             'fireable',
         ];
     }
-
-    /**
-     * Console-specific booting.
-     *
-     * @return void
-     */
-    protected function bootForConsole(): void
-    {
-        // Publishing the configuration file.
-        $this->publishes([
-            __DIR__.'/../config/fireable.php' => config_path('fireable.php'),
-        ], 'fireable.config');
-    }
 }
