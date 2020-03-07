@@ -32,16 +32,6 @@
             "Envant\\Fireable\\Tests\\": "tests"
         }
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Envant\\Fireable\\FireableServiceProvider"
-            ],
-            "aliases": {
-                "Fireable": "Envant\\Fireable\\Facades\\Fireable"
-            }
-        }
-    },
     "scripts": {
         "test": "phpunit"
     },
