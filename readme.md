@@ -1,16 +1,5 @@
 # Fireable
 
-<p align="center">
-    <a href="https://invoker.dev">
-        <img src="https://invoker.dev/assets/logo.svg" alt="Invoker – Missing Laravel Eloquent Client" width="320" height="100"><br>
-        Missing Laravel Eloquent Client
-    </a>
-</p>
-
-<p align="center">
-   
-</p>
-
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![StyleCI](https://styleci.io/repos/209407300/shield)](https://styleci.io/repos/209407300)
 [![Build Status](https://travis-ci.org/envant/fireable.svg?branch=master)](https://travis-ci.org/envant/fireable)
