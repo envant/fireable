@@ -13,8 +13,8 @@ jobs:
         laravel: [8.*, 9.*]
         dependency-version: [prefer-lowest, prefer-stable]
         include:
-          - laravel: 8.74.*
-            testbench: 6.*
+          - laravel: ^8.74
+            testbench: ^6.4
           - laravel: 9.*
             testbench: 7.*
     steps:
