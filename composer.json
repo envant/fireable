@@ -20,7 +20,7 @@
         "phpunit/phpunit": "^9.5.10",
         "mockery/mockery": "^1.2",
         "orchestra/testbench": "^4 || ^5 || ^6 || ^7",
-        "sempro/phpunit-pretty-print": "^1.1"
+        "sempro/phpunit-pretty-print": "^1.4"
     },
     "autoload": {
         "psr-4": {
