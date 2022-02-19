@@ -19,7 +19,7 @@ class Fireable
     /**
      * Match updated attributes with fireable ones and trigger events.
      *
-     * @param \Envant\Fireable\FireableAttributes|Model $model
+     * @param  \Envant\Fireable\FireableAttributes|Model  $model
      * @return void
      */
     public function processAttributes(Model $model): void
@@ -64,8 +64,8 @@ class Fireable
     /**
      * Get event name for specified attribute and assigned value pair.
      *
-     * @param string $attribute
-     * @param mixed $value
+     * @param  string  $attribute
+     * @param  mixed  $value
      * @return string|null
      */
     private function getEventName(string $attribute, $value): ?string
@@ -77,7 +77,7 @@ class Fireable
     /**
      * Get event name if values are not specified.
      *
-     * @param string $attribute
+     * @param  string  $attribute
      * @return string|null
      */
     private function getEventNameForAttribute(string $attribute): ?string
@@ -91,8 +91,8 @@ class Fireable
     /**
      * Get event name if there are specified values.
      *
-     * @param string $attribute
-     * @param mixed $value
+     * @param  string  $attribute
+     * @param  mixed  $value
      * @return string|null
      */
     private function getEventNameForExactValue(string $attribute, $value): ?string
